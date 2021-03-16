@@ -13,10 +13,9 @@ router.get('/', (req, res) => {
     Post.findAll({
       attributes: [
         'id',
-        'post_url',
+        'post_text',
         'title',
-        'created_at',
-        [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        'created_at'
       ],
       include: [
         {
@@ -44,12 +43,6 @@ router.get('/', (req, res) => {
           posts,
           loggedIn: req.session.loggedIn
         });
-
-        // pass a single post object into the homepage template (old line below)
-        // res.render('homepage', dbPostData[0].get({ plain: true }));
-
-        // non serialized object did not work (below)
-        //res.render('homepage', dbPostData[0]);
     })
     .catch(err => {
         console.log(err);
@@ -74,10 +67,9 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'post_text',
       'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'created_at'
     ],
     include: [
       {

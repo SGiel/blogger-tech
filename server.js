@@ -47,5 +47,5 @@ app.use(routes);
 // same as DROP TABLE IF EXISTS in sql
 // necessary if have new table associations
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening at https://localhost:${PORT}`));
+  app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
 });

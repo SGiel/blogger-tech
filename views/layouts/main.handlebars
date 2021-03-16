@@ -11,26 +11,30 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>
-                <a href="/">Just Tech News</a>
-            </h1>
+
             <nav>
- {{!-- 14.3.7 we are checking for loggedIn in the main layout, but we're only passing loggedIn to the single-post.handlebars 
-  template. Fortunately, variables that are passed to view templates are automatically passed to the main layout.  --}}
+                {{!-- 14.3.7 we are checking for loggedIn in the main layout, but we're only passing loggedIn to the
+                single-post.handlebars
+                template. Fortunately, variables that are passed to view templates are automatically passed to the main
+                layout. --}}
                 {{#if loggedIn}}
+                <a href="/">home</a>
                 <a href="/dashboard">dashboard</a>
                 <button id="logout" class="btn-no-style">logout</button>
                 {{else}}
                 <a href="/login">login</a>
                 {{/if}}
             </nav>
-
+            <div class="title-wrapper">
+            <h1>
+                <a href="/">Blogger-Tech</a>
+            </h1>
+            </div>
         </header>
         <main>
             {{{ body }}}
         </main>
         <footer>
-            Thanks for visiting!
         </footer>
     </div>
 
