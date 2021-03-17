@@ -44,7 +44,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 // find a single post
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
