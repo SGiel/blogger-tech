@@ -22,13 +22,15 @@
 
 ## Screenshots of web application 
 
-![Screenshot of Blogger-Tech login screen](assets/images/readme-generator-w-license.png)
+![Screenshot of Blogger-Tech login screen](assets/images/login-screenshot.png)
 
-![Screenshot of Blogger-Tech homepage](assets/images/readme-generator-w-out-license.png)
+![Screenshot of Blogger-Tech homepage](assets/images/homepage-screenshot.png)
 
-![Screenshot of Blogger-Tech dashboard](assets/images/readme-generator-w-out-license.png)
+![Screenshot of Blogger-Tech view individual post](assets/images/view-post-screenshot.png)
 
-![Screenshot of Blogger-Tech edit a post ](assets/images/readme-generator-w-out-license.png)
+![Screenshot of Blogger-Tech dashboard screen](assets/images/dashboard-screenshot.png)
+
+![Screenshot of Blogger-Tech edit a post ](assets/images/edit-post-screenshot.png)
 
 ## Installation
   Clone the repository to your terminal. Intall Node.js to your terminal. Run nmp install to install each of the packages listed in the package.json file.
