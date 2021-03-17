@@ -1,13 +1,13 @@
 # Blogger-Tech ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
-  This application is a CMS-style blog site where developer in the tech world can publish articles, blog posts and thoughts and opinions.
+  This application is a CMS-style blog site where developers in the tech world can publish articles, blog posts and thoughts and opinions.
   
 * Users initially provide a username, email and password to create an account. 
 * Navigation to the homepage presents the user with existing blog posts. 
 * Clicking on either the title of the blog post or the comments takes the user to that blog post that includes the post title, creator's username, date the post was created as well as an option to leave a comment.
 * If a comment is entered and saved then the post is updated to display the comment, the comment creator's name and the date it was created
-* The dashboard option in the navigation takes the user to any blog posts the user has created and the option ao add a new blog post
+* The dashboard option in the navigation takes the user to any blog posts the user has created and the option to add a new blog post
 * When the user chooses to edit any of their existing blog posts, they are able to delete or update their post
 * The logout option allows the user to sign out
 * Being idle on the page for more than a minute will automatically sign the user out of the site
@@ -38,7 +38,7 @@
 ## Usage
   This application's folder structure followed the Model-View-Controller paradigm. 
   
-  It used the express-handlebars package to use Handlebars.js for Views, used the MySQL2 and Sequelize packages to connect to a MySQL database for the Models and create an Express.js API for the Controllers. It also used the dotenv package to use environment variables, the bcrypt package to has passwords and the express-session and connect-session-sequelize packages to add authentication.
+  It used the express-handlebars package to use Handlebars.js for Views, used the MySQL2 and Sequelize packages to connect to a MySQL database for the Models and create an Express.js API for the Controllers. It also used the dotenv package to use environment variables, the bcrypt package to hash the passwords and the express-session and connect-session-sequelize packages to add authentication.
   
 ## License  
   
