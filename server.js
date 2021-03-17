@@ -22,27 +22,27 @@ app.set('view engine', 'handlebars');
 
 // maxAge allows for timeout of session if idle for 30 seconds
 const sess = {
+//   secret: 'Super secret secret',
+//   cookie: {},
+//   resave: false,
+//   saveUninitialized: true,
+//   store: new SequelizeStore({
+//     db: sequelize
+//   })
+// };
+
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    maxAge: 60000
+  },
   resave: false,
   saveUninitialized: true,
+  rolling: true,
+
   store: new SequelizeStore({
     db: sequelize
   })
 };
-
-  // secret: 'Super secret secret',
-  // cookie: {
-  //   maxAge: 60000
-  // },
-  // resave: false,
-  // saveUninitialized: true,
-  // rolling: true,
-
-  // store: new SequelizeStore({
-  //   db: sequelize
-  // })
-
 
 app.use(session(sess));
 
