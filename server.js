@@ -20,6 +20,7 @@ const hbs = exphbs.create({helpers});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// maxAge allows for timeout of session if idle for 30 seconds
 const sess = {
   secret: 'Super secret secret',
   cookie: {
@@ -28,17 +29,7 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   rolling: true,
-  // below changes trying to allow session timeout
 
-  //f you include resave and rolling variables it will only expire after it has been idle for the 
-  // specified length of time.
-  // resave: true,
-  // rolling: false,
-  // saveUninitialized: false,
-  // cookie: {
-  //   // expires: 30 * 1000
-  //   maxAge: 5000
-  // },  
   store: new SequelizeStore({
     db: sequelize
   })
