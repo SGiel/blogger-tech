@@ -22,9 +22,12 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    maxAge: 30000
+  },
   resave: false,
   saveUninitialized: true,
+  rolling: true,
   // below changes trying to allow session timeout
 
   //f you include resave and rolling variables it will only expire after it has been idle for the 
