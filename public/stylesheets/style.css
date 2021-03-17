@@ -101,14 +101,29 @@
     color: rgb(121, 87, 87);
   } 
 
-  .edit-post-form a, .meta a {
+  .edit-post-form a, .meta a, .post-new a {
     text-decoration: none;
     color:  rgb(58, 41, 41);
     font-weight: bold;
     transition: color .1s;
   }
   
-  .edit-post-form a:hover, .meta a:hover {
+  .edit-post-form a:hover, .meta a:hover, .post-new a:hover {
+    color:rgb(121, 87, 87);
+  }
+
+  .post-new a {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid  rgb(58, 41, 41);
+  }
+
+  .post-new a:hover {
+    border: 1px solid rgb(121, 87, 87);
+    box-shadow: 10px 5px 5px rgb(121, 87, 87);
+  }
+  
+  .edit-post-form a:hover, .meta a:hover, .post-new a:hover {
     color:rgb(121, 87, 87);
   }
 
@@ -147,7 +162,7 @@
 
   .post-text {
     width: 100%;
-    min-height: 150px;
+    min-height: 250px;
   }
   
   form > div {
