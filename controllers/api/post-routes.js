@@ -79,7 +79,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/posts/
-r//outer.post('/', withAuth, (req, res) => {
+//outer.post('/', withAuth, (req, res) => {
 router.post('/', (req, res) => {
   // expects {title: 'Why Bootcamp is the best place to learn to code!', post_text: 'This is the text of my blog', user_id: 1}
   Post.create({
