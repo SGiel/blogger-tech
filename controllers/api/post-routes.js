@@ -121,6 +121,7 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 router.delete('/:id', withAuth, (req, res) => {
+  console.log("In router.delete")
   Post.destroy({
     where: {
       id: req.params.id
@@ -135,6 +136,7 @@ router.delete('/:id', withAuth, (req, res) => {
   })
   .catch(err => {
     console.log(err);
+    console.log("I am in the catch err of post-routes")
     res.status(500).json(err);
   });
 });
