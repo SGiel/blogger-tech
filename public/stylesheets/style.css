@@ -168,6 +168,11 @@
     padding: 4px;
     margin: 0;
   }
+
+  .post .title h2 span {
+    font-weight: normal;
+    font-size: 80%;
+  }
   
   .post .title p {
     font-style: italic;
