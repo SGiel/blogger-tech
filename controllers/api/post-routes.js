@@ -96,6 +96,7 @@ router.post('/', withAuth, (req, res) => {
 // PUT /api/posts/id
 // update the title or text of the post
 router.put('/:id', withAuth, (req, res) => {
+  console.log("I am in router.put of posts")
   Post.update(
     {
       title: req.body.title,
