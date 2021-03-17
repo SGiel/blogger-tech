@@ -101,14 +101,14 @@
     color: rgb(121, 87, 87);
   } 
 
-  .edit-post-form a, .meta a {
+  .edit-post-form a, .meta a, .title h2 a {
     text-decoration: none;
     color:  rgb(58, 41, 41);
     font-weight: bold;
     transition: color .1s;
   }
   
-  .edit-post-form a:hover, .meta a:hover {
+  .edit-post-form a:hover, .meta a:hover, .title h2 a:hover {
     color:rgb(121, 87, 87);
   }
   
