@@ -22,20 +22,20 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'Super secret secret',
-  // cookie: {},
-  // resave: false,
-  // saveUninitialized: true,
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
   // below changes allow session timeout
 
   //f you include resave and rolling variables it will only expire after it has been idle for the 
   // specified length of time.
-  resave: true,
-  rolling: false,
-  saveUninitialized: false,
-  cookie: {
-    // expires: 30 * 1000
-    maxAge: 5000
-  },  
+  // resave: true,
+  // rolling: false,
+  // saveUninitialized: false,
+  // cookie: {
+  //   // expires: 30 * 1000
+  //   maxAge: 5000
+  // },  
   store: new SequelizeStore({
     db: sequelize
   })
