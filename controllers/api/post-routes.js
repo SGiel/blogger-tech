@@ -96,7 +96,6 @@ router.post('/', withAuth, (req, res) => {
 // PUT /api/posts/id
 // update the title or text of the post
 router.put('/:id', withAuth, (req, res) => {
-  console.log("I am in router.put of posts")
   Post.update(
     {
       title: req.body.title,
@@ -121,8 +120,7 @@ router.put('/:id', withAuth, (req, res) => {
   });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
-  console.log("In router.delete")
+router.delete('/:id', (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id
@@ -137,7 +135,6 @@ router.delete('/:id', withAuth, (req, res) => {
   })
   .catch(err => {
     console.log(err);
-    console.log("I am in the catch err of post-routes")
     res.status(500).json(err);
   });
 });

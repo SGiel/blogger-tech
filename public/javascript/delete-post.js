@@ -11,8 +11,7 @@ async function deleteFormHandler(event) {
     if (response.ok) {
       document.location.replace('/dashboard/')
     } else {
-      alert("here i am ", id, response.statusText);
-      console.log("id = ", id, "window.location.toString", window.location.toString());
+      alert(response.statusText);
     }
   
 }
