@@ -140,9 +140,14 @@
     border: 1px solid  rgb(58, 41, 41);
   }
   
-  textarea {
+  #comment-body {
     min-width: 40%;
     min-height: 100px;
+  }
+
+  #post-text {
+    width: 100%;
+    min-height: 150px;
   }
   
   form > div {
