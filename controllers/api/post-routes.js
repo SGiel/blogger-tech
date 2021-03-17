@@ -79,7 +79,8 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/posts/
-router.post('/', withAuth, (req, res) => {
+r//outer.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   // expects {title: 'Why Bootcamp is the best place to learn to code!', post_text: 'This is the text of my blog', user_id: 1}
   Post.create({
     title: req.body.title,
@@ -95,7 +96,7 @@ router.post('/', withAuth, (req, res) => {
 
 // PUT /api/posts/id
 // update the title or text of the post
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
   Post.update(
     {
       title: req.body.title,

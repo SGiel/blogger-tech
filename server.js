@@ -25,7 +25,7 @@ const sess = {
   cookie: {},
   resave: false,
   saveUninitialized: true,
-  // below changes allow session timeout
+  // below changes trying to allow session timeout
 
   //f you include resave and rolling variables it will only expire after it has been idle for the 
   // specified length of time.
